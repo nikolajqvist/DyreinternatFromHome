@@ -1,0 +1,31 @@
+﻿@page
+@model AnimalsModel
+@using WebApplication1.Models
+@{
+    ViewData["Title"] = "Animals";
+}
+<h1>@ViewData["Title"]</h1>
+@{
+    <h2>Snakes</h2>
+    foreach (var snake in Model.snakes)
+    {
+        <h6>@snake.Race</h6>
+
+        <p>@snake.Age years old.</p>
+    }
+    <h2>Bears</h2>
+    foreach (var bear in Model.bears)
+    {
+        <h6>@bear.Race</h6> 
+
+        <p>@bear.Age years old.</p>
+    }
+    <h2>Cats</h2>
+    foreach (var cat in Model.cats)
+    {
+        <h6>@cat.Race</h6>
+
+        <p>@cat.Age years old</p>
+    }
+
+}
